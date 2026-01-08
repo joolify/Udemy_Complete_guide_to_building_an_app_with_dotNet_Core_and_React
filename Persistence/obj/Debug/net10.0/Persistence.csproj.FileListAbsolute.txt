@@ -13,3 +13,4 @@ C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\Persistence\obj\Debug\net10.0\refint\Persistence.dll
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\Persistence\obj\Debug\net10.0\Persistence.pdb
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\Persistence\obj\Debug\net10.0\ref\Persistence.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\Persistence\obj\Debug\net10.0\Persistence.sourcelink.json
