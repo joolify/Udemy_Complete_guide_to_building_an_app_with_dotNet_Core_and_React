@@ -426,3 +426,20 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# .NET
+**/bin/
+**/obj/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific files
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
