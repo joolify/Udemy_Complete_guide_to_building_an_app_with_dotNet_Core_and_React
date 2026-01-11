@@ -1,0 +1,139 @@
+To start a **React app from CMD (Command Prompt)**, it depends on how the project was created. Here are the **three most common cases**, step by step.
+
+---
+
+## ✅ 1. If the project was created with **Vite** (most common now)
+
+1. Open **CMD**
+2. Go to your project folder:
+
+```cmd
+cd path\to\your\react-project
+```
+
+3. Install dependencies (only needed once):
+
+```cmd
+npm install
+```
+
+4. Start the dev server:
+
+```cmd
+npm run dev
+```
+
+5. Open the browser at the URL shown (usually):
+
+```
+http://localhost:5173
+```
+
+---
+
+## ✅ 2. If the project was created with **Create React App (CRA)**
+
+1. Open **CMD**
+2. Navigate to the project folder:
+
+```cmd
+cd path\to\your\react-project
+```
+
+3. Install dependencies (only once):
+
+```cmd
+npm install
+```
+
+4. Start React:
+
+```cmd
+npm start
+```
+
+5. Browser opens automatically at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## ✅ 3. If you’re unsure which one you’re using
+
+Run this inside your project folder:
+
+```cmd
+dir
+```
+
+Look for:
+
+* `vite.config.ts` or `vite.config.js` → **Vite**
+* `react-scripts` in `package.json` → **Create React App**
+
+You can also check by running:
+
+```cmd
+type package.json
+```
+
+---
+
+## ❗ Common problems & fixes
+
+### 🔹 `npm is not recognized`
+
+Install **Node.js** (includes npm):
+
+* [https://nodejs.org](https://nodejs.org)
+  Then restart CMD.
+
+---
+
+### 🔹 PowerShell script execution error
+
+If you previously saw:
+
+> *running scripts is disabled*
+
+Run **PowerShell as Admin**:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+---
+
+### 🔹 Port already in use
+
+React will usually ask to use another port. Just answer:
+
+```text
+Y
+```
+
+---
+
+## 🧠 Pro tip (your .NET + React setup)
+
+Since you’re building **ASP.NET + React**, the typical workflow is:
+
+```cmd
+# Backend
+dotnet watch run
+
+# Frontend
+cd client-app
+npm run dev
+```
+
+---
+
+If you want, tell me:
+
+* Are you using **Vite or CRA?**
+* Are you running React **standalone or with ASP.NET Core?**
+
+I can tailor the exact commands for your setup 💻🔥
