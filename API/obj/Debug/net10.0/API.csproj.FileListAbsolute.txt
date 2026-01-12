@@ -210,3 +210,9 @@ C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\obj\Debug\net10.0\API.sourcelink.json
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\MediatR.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\MediatR.Contracts.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
