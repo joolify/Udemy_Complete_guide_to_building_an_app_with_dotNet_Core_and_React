@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Lrmv4IfRk0o=",
+  "dgSpecHash": "iHcxBdPwOT0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Documents\\Utbildning\\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\\Demo\\Reactivities\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mediatr\\14.0.0\\mediatr.14.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

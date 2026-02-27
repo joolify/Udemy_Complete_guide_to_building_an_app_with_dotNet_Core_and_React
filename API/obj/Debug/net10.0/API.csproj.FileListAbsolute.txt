@@ -216,3 +216,5 @@ C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\AutoMapper.dll
+C:\Users\Admin\Documents\Utbildning\Udemy_Complete_guide_to_building_an_app_with_dotNet_Core_and_React\Demo\Reactivities\API\bin\Debug\net10.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

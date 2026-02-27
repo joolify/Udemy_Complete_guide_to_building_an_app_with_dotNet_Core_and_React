@@ -1,3 +1,4 @@
+using AutoMapper;
 using MediatR;
 using Persistence;
 
@@ -13,10 +14,12 @@ public class EditActivity
     public class Handler : IRequestHandler<Command, string>
     { 
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public Handler(AppDbContext context)
+        public Handler(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<string> Handle(Command request, CancellationToken cancellationToken)
@@ -24,7 +27,7 @@ public class EditActivity
             var activity = await _context.Activities.FindAsync([request.Activity.Id], cancellationToken) ??
              throw new Exception ("Cannot find activity");
 
-             activity.Title = request.Activity.Title;
+            _mapper.Map(request.Activity, activity);
 
              await _context.SaveChangesAsync(cancellationToken);
 
