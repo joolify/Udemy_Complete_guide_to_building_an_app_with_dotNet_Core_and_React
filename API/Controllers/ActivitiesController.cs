@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using Application.Activities.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -27,5 +28,11 @@ public class ActivitiesController : BaseApiController
     public async Task<ActionResult<Domain.Activity>> GetActivityDetail(string id)
     {
         return await _mediator.Send(new GetActivityDetails.Query{Id = id});
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<string>> CreateActivity(Domain.Activity activity)
+    {
+        return await Mediator.Send(new CreateActivity.Command{Activity = activity});
     }
 }
