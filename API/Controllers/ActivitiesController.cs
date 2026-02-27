@@ -19,7 +19,8 @@ public class ActivitiesController : BaseApiController
     [HttpGet]
     public async Task<ActionResult<List<Domain.Activity>>> GetActivities()
     {
-        return await _mediator.Send(new GetActivityList.Query());
+        var list = new GetActivityList.Query();
+        return await _mediator.Send(list);
     }
 
     [HttpGet("{id}")]
