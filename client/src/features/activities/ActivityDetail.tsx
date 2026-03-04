@@ -2,8 +2,12 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@
 
 type Props = {
   activity: Activity
+  cancelSelectActivity: () => void
 }
-export default function ActivityDetail({ activity }: Props) {
+export default function ActivityDetail({ activity, cancelSelectActivity }: Props) {
+
+  console.log("ActivityDetail: " + JSON.stringify(activity))
+  console.log("ActivityDetail2: " + cancelSelectActivity)
   return (
     <Card sx={{ borderRadius: 3 }}>
       <CardMedia
@@ -17,7 +21,7 @@ export default function ActivityDetail({ activity }: Props) {
       </CardContent>
       <CardActions>
         <Button color="primary">Edit</Button>
-        <Button color="inherit">Cancel</Button>
+        <Button onClick={cancelSelectActivity} color="inherit">Cancel</Button>
       </CardActions>
     </Card>
   )
