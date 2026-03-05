@@ -57,7 +57,7 @@ function App() {
             cancelSelectActivity={handleCancelSelectActivity}
             selectedActivity={selectedActivity}
             editMode={editMode}
-            openForm={handleOpenForm}
+            openForm={(showActivity) => handleOpenForm(showActivity)}
             closeForm={handleCloseForm}
           />
         </Container>
