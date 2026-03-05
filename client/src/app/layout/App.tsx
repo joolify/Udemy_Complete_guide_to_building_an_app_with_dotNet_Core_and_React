@@ -15,24 +15,30 @@ function App() {
       .then(response => setActivities(response.data))
   }, [])
 
-  const handleSelectActivity = (id: string) => {
+  const handleSelectActivity = (id: string, editMode: boolean) => {
+    setEditMode(editMode);
     setSelectedActivity(activities.find(x => x.id === id));
   }
 
   const handleCancelSelectActivity = () => {
     setSelectedActivity(undefined)
+
+    console.log("handleCancelSelectActivity: " + new Date())
   }
 
   const handleOpenForm = (id?: string) => {
-    if(id) handleSelectActivity(id);
+    if (id) handleSelectActivity(id, true);
     else handleCancelSelectActivity();
+
     setEditMode(true);
 
-    console.log("handleOpenForm: " + editMode)
+    console.log("handleOpenForm: " + editMode + ", " + new Date())
   }
 
   const handleCloseForm = () => {
     setEditMode(false);
+
+    console.log("handleCloseForm: " + editMode)
   }
 
   console.log("App: " + handleSelectActivity)
@@ -42,17 +48,17 @@ function App() {
 
   return (
     <>
-      <Box sx={{bgcolor: '#eeeeee'}}>
+      <Box sx={{ bgcolor: '#eeeeee' }}>
         <CssBaseline />
         <NavBar openForm={handleOpenForm} />
         <Container maxWidth='xl' sx={{ mt: 3 }}>
           <ActivityDashboard activities={activities}
-          selectActivity = {handleSelectActivity}
-          cancelSelectActivity = {handleCancelSelectActivity}
-          selectedActivity = {selectedActivity}
-          editMode={editMode}
-          openForm={handleOpenForm}
-          closeForm={handleCloseForm}
+            selectActivity={(id) => handleSelectActivity(id, false)}
+            cancelSelectActivity={handleCancelSelectActivity}
+            selectedActivity={selectedActivity}
+            editMode={editMode}
+            openForm={handleOpenForm}
+            closeForm={handleCloseForm}
           />
         </Container>
       </Box>
