@@ -8,9 +8,11 @@ type Props = {
     selectActivity: (id: string) => void;
     cancelSelectActivity: () => void;
     selectedActivity?: Activity;
-    openForm:  (id: string) => void
+    openForm:  (id?: string) => void
     closeForm: () => void;
-    editMode: boolean
+    editMode: boolean;
+    submitForm: (activity: Activity) => void
+    deleteActivity: (id: string) => void
 }
 
 export default function ActivityDashboard({
@@ -20,14 +22,16 @@ export default function ActivityDashboard({
     selectedActivity,
     openForm,
     closeForm,
-    editMode
-
+    editMode,
+    submitForm,
+    deleteActivity
 }: Props) {
 
     console.log("ActivityDashboard: " + JSON.stringify(activities));
     console.log("ActivityDashboard2: " + selectActivity);
     console.log("ActivityDashboard3: " + cancelSelectActivity);
     console.log("ActivityDashboard4: " + JSON.stringify(selectedActivity));
+    console.log("ActivityDashboard deleteActivity:", deleteActivity);
     return (
         <>
             <Grid container spacing={3}>
@@ -35,6 +39,7 @@ export default function ActivityDashboard({
                     <ActivityList
                         activities={activities}
                         selectActivity={selectActivity}
+                        deleteActivity={deleteActivity}
                     />
                 </Grid>
                 <Grid size={5}>
@@ -46,7 +51,10 @@ export default function ActivityDashboard({
                         />}
 
                 {editMode &&
-                <ActivityForm closeForm={closeForm} activity={selectedActivity} />}
+                <ActivityForm closeForm={closeForm} 
+                activity={selectedActivity} 
+                submitForm={submitForm}
+                />}
                 </Grid>
             </Grid>
         </>

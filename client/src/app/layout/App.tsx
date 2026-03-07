@@ -41,6 +41,26 @@ function App() {
     console.log("handleCloseForm: " + editMode)
   }
 
+  const handleSubmitForm = (activity: Activity) => {
+    console.log("handleSubmitForm: " + JSON.stringify(activity));
+    if (activity.id) {
+      setActivities(activities.map(x => x.id === activity.id ? activity : x))
+    } else {
+      const newActivity = {...activity, id: activities.length.toString()}
+      setSelectedActivity(newActivity);
+      setActivities([...activities, newActivity])
+    }
+    console.log("handleSubmitForm: " + JSON.stringify(activities));
+
+    setEditMode(false);
+  }
+
+  const handleDelete = (id: string) => {
+    setActivities(activities.filter(x => x.id !== id))
+
+    console.log("handleDelete: " + JSON.stringify(activities));
+  }
+
   console.log("App: " + handleSelectActivity)
   console.log("App 2: " + handleSelectActivity)
   console.log("App 3: " + JSON.stringify(activities))
@@ -57,8 +77,10 @@ function App() {
             cancelSelectActivity={handleCancelSelectActivity}
             selectedActivity={selectedActivity}
             editMode={editMode}
-            openForm={(showActivity) => handleOpenForm(showActivity)}
+            openForm={handleOpenForm}
             closeForm={handleCloseForm}
+            submitForm={handleSubmitForm}
+            deleteActivity={handleDelete}
           />
         </Container>
       </Box>

@@ -2,7 +2,7 @@ import { Box, AppBar, Toolbar, Typography, Button, Container, MenuItem } from "@
 import { Group } from "@mui/icons-material";
 
 type Props = {
-    openForm: (id?: string) => void;
+    openForm: () => void;
 }
 
 export default function NavBar({openForm}: Props) {
