@@ -1,22 +1,14 @@
 import { Box, Container, CssBaseline, Typography } from "@mui/material";
-import axios from "axios";
 import { useState } from "react";
 import NavBar from './NavBar.tsx'
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard.tsx";
-import { useQuery } from "@tanstack/react-query";
+import { useActivities } from "../../lib/hooks/useActivities.tsx";
 
 function App() {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined);
   const [editMode, setEditMode] = useState(false);
 
-  const { data: activities = [], isPending } = useQuery({
-  queryKey: ['activities'],
-  queryFn: async () => {
-    const response = await axios.get<Activity[]>('https://localhost:5001/api/activities')
-    return response.data
-  }
-})
-
+  const {activities, isPending} = useActivities();
 
   const handleSelectActivity = (id: string, editMode: boolean) => {
     setEditMode(editMode);
@@ -65,11 +57,11 @@ function App() {
   console.log("App: " + handleSelectActivity)
   console.log("App 2: " + handleSelectActivity)
   console.log("App 3: " + JSON.stringify(activities))
-  console.log("App 3: " + JSON.stringify(selectedActivity))
+  console.log("App 4: " + JSON.stringify(selectedActivity))
 
   return (
     <>
-      <Box sx={{ bgcolor: '#eeeeee' }}>
+      <Box sx={{ bgcolor: '#eeeeee', minHeight: '100vh' }}>
         <CssBaseline />
         <NavBar openForm={handleOpenForm} />
         <Container maxWidth='xl' sx={{ mt: 3 }}>
