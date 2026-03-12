@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default function ActivityForm({ activity, closeForm }: Props) {
-    const { updateActivity } = useActivities();
+    const { updateActivity, createActivity } = useActivities();
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -22,11 +22,16 @@ export default function ActivityForm({ activity, closeForm }: Props) {
         })
 
         if (activity) {
+            if (!updateActivity) throw new Error("updateActivity is undefined!");
             data.id = activity.id;
 
             console.log("ActivityForm: " + JSON.stringify(data))
 
             await updateActivity.mutateAsync(data as unknown as Activity);
+            closeForm();
+        }else{
+            if (!createActivity) throw new Error("createActivity is undefined!");
+            await createActivity.mutateAsync(data as unknown as Activity)
             closeForm();
         }
     }
@@ -50,7 +55,7 @@ export default function ActivityForm({ activity, closeForm }: Props) {
                         type="submit"
                         color='success'
                         variant="contained"
-                        disabled={updateActivity?.isPending}
+                        disabled={updateActivity?.isPending || createActivity?.isPending}
                     >Submit</Button>
                 </Box>
             </Box>

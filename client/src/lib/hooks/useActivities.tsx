@@ -14,8 +14,20 @@ export const useActivities = () => {
 
     const updateActivity = useMutation({
         mutationFn: async (activity: Activity) => {
-            console.log("useActivities: " + JSON.stringify(activity))
+            console.log("useActivities.updateActivity: " + JSON.stringify(activity))
             await agent.put('/activities', activity)
+        },
+        onSuccess: async () => {
+            await queryClient.invalidateQueries({
+                queryKey: ['activities']
+            })
+        }
+    })
+
+    const createActivity = useMutation({
+        mutationFn: async (activity: Activity) => {
+            console.log("useActivities.createActivity: " + JSON.stringify(activity))
+            await agent.post('/activities', activity)
         },
         onSuccess: async () => {
             await queryClient.invalidateQueries({
@@ -27,6 +39,7 @@ export const useActivities = () => {
     return {
         activities, 
         isPending,
-        updateActivity
+        updateActivity,
+        createActivity
     }
 }
