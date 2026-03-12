@@ -443,3 +443,32 @@ FodyWeavers.xsd
 # OS
 .DS_Store
 Thumbs.db
+
+# .NET build outputs
+bin/
+obj/
+
+# Debug files
+*.pdb
+*.dll
+*.exe
+
+# VS specific files
+*.user
+*.suo
+*.cache
+*.csproj.AssemblyReference.cache
+*.AssemblyInfo.cs
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider / IDE caches
+.idea/
+*.sln.iml
